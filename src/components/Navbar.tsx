@@ -2,7 +2,7 @@ import React from 'react'
 import {Flex, Box, Text, Image, VStack, Tooltip, Divider} from '@chakra-ui/react';
 import {Link} from 'react-router-dom';
 import {MdDashboard, MdScheduleSend, MdRequestPage, MdSquareFoot, MdPeopleAlt} from 'react-icons/md';
-import { DarkModeToggle} from './'
+import { DarkModeToggle } from './'
 
 const Navbar = () => {
   return (
@@ -11,11 +11,11 @@ const Navbar = () => {
           <Image marginLeft={{base: '-2px',lg:'12px'}} boxSize={{base: '50px',lg:'100px'}} src='https://github.com/rrios4/roofing-webapp/blob/main/client/src/assets/LogoRR.png?raw=true'/>
         </Flex>
         <VStack mt={'6rem'} spacing='6'>
-                <Tooltip label='Dashboard'><Box p={'1'} rounded='md' _hover={{bg:'gray.600'}}><MdDashboard size={'30px'} color='white'/></Box></Tooltip>
-                <Tooltip label='Estimate Requests'><Box p={'1'} rounded='md' _hover={{bg:'gray.600'}}><MdScheduleSend size={'30px'} color='white'/></Box></Tooltip>
-                <Tooltip label='Invoices'><Box p={'1'} rounded='md' _hover={{bg:'gray.600'}}><MdRequestPage size={'30px'} color='white'/></Box></Tooltip>
-                <Tooltip label='Estimates'><Box p={'1'} rounded='md' _hover={{bg:'gray.600'}}><MdSquareFoot size={'30px'} color='white'/></Box></Tooltip>
-                <Tooltip label='Customers'><Box p={'1'} rounded='md' _hover={{bg:'gray.600'}}><MdPeopleAlt size={'30px'} color='white'/></Box></Tooltip>
+        <Link to={'/'}><Tooltip label='Dashboard'><Box p={'1'} rounded='md' _hover={{bg:'gray.600'}}><MdDashboard size={'30px'} color='white'/></Box></Tooltip></Link>
+                <Link to={'/estimate-requests'}><Tooltip label='Estimate Requests'><Box p={'1'} rounded='md' _hover={{bg:'gray.600'}}><MdScheduleSend size={'30px'} color='white'/></Box></Tooltip></Link>
+                <Link to={'/invoices'}><Tooltip label='Invoices'><Box p={'1'} rounded='md' _hover={{bg:'gray.600'}}><MdRequestPage size={'30px'} color='white'/></Box></Tooltip></Link>
+                <Link to={'/estimates'}><Tooltip label='Estimates'><Box p={'1'} rounded='md' _hover={{bg:'gray.600'}}><MdSquareFoot size={'30px'} color='white'/></Box></Tooltip></Link>
+                <Link to={'/customers'}><Tooltip label='Customers'><Box p={'1'} rounded='md' _hover={{bg:'gray.600'}}><MdPeopleAlt size={'30px'} color='white'/></Box></Tooltip></Link>
         </VStack>
         <Box display={{base:'none',lg:'flex'}} justifyContent='center' marginTop={{base:'0',lg:'auto'}} marginLeft={{base:'auto', lg:'0'}} p='1rem'>
                 {/* <Link to='/'>
