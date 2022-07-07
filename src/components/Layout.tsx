@@ -3,19 +3,18 @@ import { Navbar } from './'
 import { Flex } from '@chakra-ui/react';
 
 interface Props {
-    children: React.ReactNode
+    children?: React.ReactNode
 };
 
-const Layout = (props:Props) => {
+const Layout = (props: Props) => {
   return (
     <Flex>
         <header>
             <Navbar/>
         </header>
-        <main>
+        <Flex w={'full'}>
             {props.children}
-        </main>
-
+        </Flex>
     </Flex>
   )
 }

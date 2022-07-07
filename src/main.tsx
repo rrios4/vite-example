@@ -1,8 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import './index.css'
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import { Layout } from './components';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import {Customers} from './pages'
 
 const colors = {
   brand: {
@@ -16,8 +22,15 @@ const theme = extendTheme({ colors })
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <App />
-    </ChakraProvider>
+    <BrowserRouter>
+      <ChakraProvider theme={theme}>
+        <Layout>
+          <Routes>
+            <Route path='/' element={<App/>}/>
+            <Route path='/customers' element={<Customers/>}/>
+          </Routes>
+        </Layout>
+      </ChakraProvider>
+    </BrowserRouter>
   </React.StrictMode>
 )
