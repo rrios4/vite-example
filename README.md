@@ -1,0 +1,2 @@
+# Vite Example
+This is a example project to learn how to work with Vite app to better improve at creating components, using hooks, and a place to learn how to use Typescript. Vite is a react app that is better optimized for building app and might be my go to way to creating any react app from now on if I want to use react. Next js would be my primary and Vite would be secondary replacing create-react-app cli method.
